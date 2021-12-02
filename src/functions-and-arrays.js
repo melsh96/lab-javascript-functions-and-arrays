@@ -94,13 +94,12 @@ function uniquifyArray(arr) {
     return null;
   }
   for (let i = 0; i < arr.length; i++) {
-    if (!arr.length.includes(arr[i])) {
-      newArray = arr[i];
+    if (!newArray.includes(arr[i])) {
+      newArray.push(arr[i]);
     } 
   }
   return (newArray);
 }
-
 
 
 // Iteration #6: Find elements
