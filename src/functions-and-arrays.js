@@ -136,7 +136,11 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+}
 
 
 
