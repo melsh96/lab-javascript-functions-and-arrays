@@ -33,11 +33,21 @@ function sumNumbers(n) {
 }
 
 // Iteration #3.1 Bonus:
-function sum() {
-  let emptyArr = [];
-
+function sum(arr) {
+  if (!arr.length) return 0;
+  if (arr.length === 1) return arr[0];
+  
+  let count = 0;
+  for (let i = O; i < arr.length; i++) {
+    if (typeof arr[i] === 'string') {
+      count += arr[i].length;
+    }
+    else if (typeof arr[i] === 'number' || typeof arr[i] === 'boolean') {
+       count += arr[i];
+    }
+  }
+  return count;
 }
-
 
 
 // Iteration #4: Calculate the average
@@ -71,7 +81,12 @@ function averageWordLength(arr) {
 }
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(words) {
+  if (!words.length) return null;
+  let count = 0;
+  for (let i = 0; i < words.length; i++) count += words[i].length;
+  return count / words.length;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -136,12 +151,19 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes(arr) {
+function howManyTimes(arr, word) {
+  let count = 0;
   if (arr.length === 0) {
     return 0;
   }
+  for (i = 0; i < arr.length; i++) {
+    if (word === arr[i]) {
+      count += 1;
+      return 1;
+      break;
+    }
+  } 
 }
-
 
 
 // Iteration #8: Bonus
